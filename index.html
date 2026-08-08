@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- DEMO SITE built by Wilson Innovations for Key Food Waters (Tampa, FL).
+     This is a demonstration — remove the noindex tag below when going live. -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><!-- DEMO: remove this line when launching on the real domain -->
+<title>Key Food Waters — Supermarket in Tampa, FL | Open 7AM–10PM Every Day</title>
+<meta name="description" content="Key Food Supermarket on W Waters Ave, Tampa. Fresh produce, carnicería, Latin staples, dairy &amp; café. Super deals every week — open 7AM–10PM every day. (813) 252-3305.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Key Food Waters — Supermarket in Tampa, FL">
+<meta property="og:description" content="Fresh produce, carnicería, Latin staples &amp; super deals every week. Open 7AM–10PM every day at 7537 W Waters Ave, Tampa.">
+<meta property="og:url" content="https://wilsoninnovations.net/key-food-waters/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&amp;w=1200&amp;auto=format&amp;fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Key Food Supermarket",
+  "alternateName": "Key Food Waters",
+  "telephone": "+18132523305",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7537 W Waters Ave",
+    "addressLocality": "Tampa",
+    "addressRegion": "FL",
+    "postalCode": "33615",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "22:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "109"
+  },
+  "sameAs": ["https://www.instagram.com/keyfoodwaters/"],
+  "url": "https://wilsoninnovations.net/key-food-waters/"
+}
+</script>
+<style>
+:root {
+  --red: #d81f2a;
+  --red-dark: #b3121c;
+  --blue: #10457e;
+  --blue-deep: #0c3462;
+  --green: #1f8a3b;
+  --green-soft: #e6f4ea;
+  --cream: #fff8ef;
+  --paper: #ffffff;
+  --ink: #1c2430;
+  --ink-soft: #4c5a6b;
+  --line: #e8e2d8;
+  --yellow: #ffc93c;
+  --shadow-sm: 0 2px 10px rgba(28, 36, 48, .08);
+  --shadow-md: 0 10px 30px rgba(28, 36, 48, .12);
+  --shadow-lg: 0 22px 50px rgba(28, 36, 48, .18);
+  --radius: 18px;
+  --font-display: "Boldonse", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans Condensed", system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  font-size: 1.06rem;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.container { max-width: 1180px; margin-left: auto; margin-right: auto; padding-left: 22px; padding-right: 22px; }
+
+h1, h2, h3 { line-height: 1.15; }
+.display { font-family: var(--font-display); font-weight: 400; letter-spacing: .01em; }
+
+.kicker {
+  display: inline-block;
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+.section-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3.4vw, 2.3rem); color: var(--ink); margin-bottom: 12px; }
+.section-sub { color: var(--ink-soft); max-width: 640px; font-size: 1.08rem; }
+.es-line { color: var(--green); font-weight: 600; font-style: italic; margin-top: 6px; }
+
+/* ============ buttons ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 15px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn--red { background: var(--red); color: #fff; box-shadow: 0 8px 22px rgba(216, 31, 42, .35); }
+.btn--red:hover { background: var(--red-dark); box-shadow: 0 12px 30px rgba(216, 31, 42, .45); }
+.btn--red::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -80%;
+  width: 40%; height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: skewX(-18deg);
+  transition: left .5s ease;
+}
+.btn--red:hover::after { left: 130%; }
+.btn--outline { background: #fff; color: var(--blue); border-color: var(--blue); }
+.btn--outline:hover { background: var(--blue); color: #fff; box-shadow: 0 10px 26px rgba(16, 69, 126, .3); }
+.btn svg { flex-shrink: 0; }
+
+/* ============ header ============ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow .25s ease;
+}
+.site-header.is-scrolled { box-shadow: var(--shadow-sm); }
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 72px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+.brand-mark {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--red);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(216,31,42,.35);
+}
+.brand-text { display: flex; flex-direction: column; min-width: 0; }
+.brand-name { font-family: var(--font-display); font-size: .98rem; color: var(--blue-deep); line-height: 1.25; }
+.brand-tag { font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+.header-nav { display: flex; gap: 4px; margin-left: auto; }
+.header-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .98rem;
+  color: var(--ink-soft);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: color .15s ease, background .15s ease;
+}
+.header-nav a:hover { color: var(--red); background: #fdf0f1; }
+.header-cta {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .96rem;
+  padding: 11px 20px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(216,31,42,.3);
+  transition: transform .2s ease, background .2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.header-cta:hover { transform: translateY(-2px); background: var(--red-dark); }
+@media (min-width: 921px) {
+  .header-nav ~ .header-cta { margin-left: 0; }
+}
+@media (max-width: 920px) {
+  .header-nav { display: none; }
+}
+@media (max-width: 600px) {
+  .header-cta { padding: 11px; }
+  .header-cta .cta-label { display: none; }
+  .brand-name { font-size: .88rem; }
+}
+
+/* ============ hero ============ */
+.hero {
+  position: relative;
+  background:
+    radial-gradient(1000px 500px at 85% -10%, rgba(216,31,42,.07), transparent 60%),
+    radial-gradient(800px 480px at -10% 110%, rgba(31,138,59,.08), transparent 60%),
+    var(--cream);
+  overflow: hidden;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 88px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: .92rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+.hero-badge .stars { color: var(--yellow); letter-spacing: 2px; font-size: .95rem; }
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 5vw, 3.3rem);
+  color: var(--blue-deep);
+  margin-bottom: 8px;
+}
+.hero h1 .accent { color: var(--red); }
+.hero-es {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+.hero-sub { color: var(--ink-soft); font-size: 1.12rem; max-width: 520px; margin-bottom: 26px; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-bottom: 30px; }
+.hero-fact { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; color: var(--ink); font-size: .99rem; }
+.hero-fact svg { color: var(--red); flex-shrink: 0; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.hero-visual { position: relative; }
+.hero-photo {
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 6px solid #fff;
+  transform: rotate(1.2deg);
+}
+.hero-photo img { width: 100%; height: 460px; object-fit: cover; }
+.hero-tag {
+  position: absolute;
+  top: -20px;
+  right: 6px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: .8rem;
+  text-align: center;
+  line-height: 1.35;
+  padding: 16px 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  transform: rotate(6deg);
+  animation: tag-swing 5s ease-in-out infinite;
+}
+.hero-tag small { display: block; font-family: var(--font-body); font-weight: 700; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
+@keyframes tag-swing {
+  0%, 100% { transform: rotate(6deg) translateY(0); }
+  50% { transform: rotate(2deg) translateY(-6px); }
+}
+.hero-hours-chip {
+  position: absolute;
+  bottom: -18px;
+  left: -8px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 14px;
+  padding: 13px 20px;
+  font-weight: 700;
+  font-size: .95rem;
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  transform: rotate(-2deg);
+}
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; padding-top: 48px; padding-bottom: 72px; }
+  .hero-photo img { height: 320px; }
+  .hero-tag { top: -14px; right: 2px; padding: 12px 14px; font-size: .7rem; }
+  .hero-hours-chip { bottom: -14px; left: 2px; font-size: .88rem; }
+}
+
+/* ============ marquee strip ============ */
+.strip {
+  background: var(--red);
+  color: #fff;
+  overflow: hidden;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.strip-track {
+  display: flex;
+  gap: 44px;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .86rem;
+}
+.strip-track span { display: inline-flex; align-items: center; gap: 44px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .strip-track { animation: none; } }
+
+/* ============ deals ============ */
+.deals { background: var(--paper); padding-top: 96px; padding-bottom: 96px; }
+.deals-head { margin-bottom: 46px; }
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 44px;
+}
+.deal-card {
+  position: relative;
+  background: var(--cream);
+  border: 2px dashed var(--red);
+  border-radius: var(--radius);
+  padding: 30px 24px 26px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.deal-card:hover { transform: translateY(-6px) rotate(-.5deg); box-shadow: var(--shadow-md); }
+.deal-card .punch {
+  position: absolute;
+  top: 14px; left: 50%;
+  transform: translateX(-50%);
+  width: 34px; height: 10px;
+  background: #fff;
+  border: 2px solid var(--red);
+  border-radius: 999px;
+}
+.deal-emoji { font-size: 2rem; margin-top: 14px; margin-bottom: 10px; }
+.deal-card h3 { font-family: var(--font-display); font-size: 1.02rem; color: var(--blue-deep); margin-bottom: 8px; }
+.deal-card p { color: var(--ink-soft); font-size: .97rem; }
+.deal-card .es { display: block; margin-top: 10px; color: var(--green); font-weight: 600; font-style: italic; font-size: .92rem; }
+.deals-cta {
+  background: linear-gradient(120deg, var(--blue) 0%, var(--blue-deep) 100%);
+  border-radius: 22px;
+  color: #fff;
+  padding: 40px 42px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  box-shadow: var(--shadow-md);
+}
+.deals-cta h3 { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 6px; }
+.deals-cta p { color: #cfe0f4; max-width: 520px; }
+.btn--ig {
+  background: #fff;
+  color: var(--blue-deep);
+}
+.btn--ig:hover { box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+@media (max-width: 980px) { .deals-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .deals-grid { grid-template-columns: 1fr; } .deals-cta { padding: 30px 26px; } }
+
+/* ============ departments ============ */
+.departments { background: var(--green-soft); padding-top: 96px; padding-bottom: 96px; }
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+  margin-top: 46px;
+}
+.dept-card {
+  grid-column: span 2;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.dept-card:nth-child(4), .dept-card:nth-child(5) { grid-column: span 3; }
+.dept-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.dept-photo { height: 200px; overflow: hidden; }
+.dept-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.dept-card:hover .dept-photo img { transform: scale(1.05); }
+.dept-body { padding: 22px 24px 26px; }
+.dept-body h3 { font-family: var(--font-display); font-size: 1rem; color: var(--blue-deep); margin-bottom: 6px; }
+.dept-body .es-name { color: var(--green); font-weight: 600; font-style: italic; font-size: .9rem; display: block; margin-bottom: 8px; }
+.dept-body p { color: var(--ink-soft); font-size: .96rem; }
+@media (max-width: 900px) {
+  .dept-grid { grid-template-columns: 1fr 1fr; }
+  .dept-card, .dept-card:nth-child(4), .dept-card:nth-child(5) { grid-column: span 1; }
+}
+@media (max-width: 560px) {
+  .dept-grid { grid-template-columns: 1fr; }
+  .dept-photo { height: 180px; }
+}
+
+/* ============ reviews ============ */
+.reviews { background: var(--paper); padding-top: 96px; padding-bottom: 96px; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 46px; }
+.review-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.review-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.review-stars { color: var(--yellow); letter-spacing: 3px; font-size: 1.05rem; margin-bottom: 14px; }
+.review-text { color: var(--ink); font-size: 1rem; flex: 1; }
+.review-name { margin-top: 18px; font-weight: 700; color: var(--blue-deep); }
+.review-src { font-size: .84rem; color: var(--ink-soft); }
+@media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+/* ============ visit ============ */
+.visit { background: var(--blue-deep); color: #fff; padding-top: 96px; padding-bottom: 96px; }
+.visit .kicker { color: var(--yellow); }
+.visit .section-title { color: #fff; }
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; margin-top: 40px; align-items: start; }
+.visit-info { display: flex; flex-direction: column; gap: 24px; }
+.visit-item { display: flex; gap: 16px; align-items: flex-start; }
+.visit-item svg { color: var(--yellow); flex-shrink: 0; margin-top: 4px; }
+.visit-item h3 { font-size: 1.05rem; margin-bottom: 4px; font-weight: 700; }
+.visit-item p, .visit-item a { color: #cfe0f4; text-decoration: none; }
+.visit-item a:hover { color: #fff; text-decoration: underline; }
+.visit-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+.visit-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid rgba(255,255,255,.15);
+}
+.visit-map iframe { display: block; width: 100%; height: 380px; border: 0; }
+@media (max-width: 900px) { .visit-grid { grid-template-columns: 1fr; } .visit-map iframe { height: 300px; } }
+
+/* ============ footer ============ */
+.site-footer { background: #0a2545; color: #9fb4cd; padding-top: 44px; padding-bottom: 44px; font-size: .95rem; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+.footer-brand { font-family: var(--font-display); color: #fff; font-size: 1rem; }
+.footer-brand span { color: var(--yellow); }
+.site-footer a { color: #cfe0f4; }
+.site-footer a:hover { color: #fff; }
+.footer-credit { font-size: .88rem; }
+
+/* ============ scroll reveals (motion polish) ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px) scale(.975);
+  filter: blur(7px);
+  transition:
+    opacity .8s cubic-bezier(.2,.7,.2,1),
+    transform .8s cubic-bezier(.2,.7,.2,1),
+    filter .8s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.is-visible { opacity: 1; transform: none; filter: none; }
+.reveal[data-d="1"] { transition-delay: .09s; }
+.reveal[data-d="2"] { transition-delay: .18s; }
+.reveal[data-d="3"] { transition-delay: .27s; }
+.deals-grid > .reveal:nth-child(2), .reviews-grid > .reveal:nth-child(2) { transition-delay: .1s; }
+.deals-grid > .reveal:nth-child(3), .reviews-grid > .reveal:nth-child(3) { transition-delay: .2s; }
+.deals-grid > .reveal:nth-child(4) { transition-delay: .3s; }
+.dept-grid > .reveal:nth-child(2) { transition-delay: .1s; }
+.dept-grid > .reveal:nth-child(3) { transition-delay: .2s; }
+.dept-grid > .reveal:nth-child(5) { transition-delay: .1s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .hero-tag { animation: none; }
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">KF</span>
+      <span class="brand-text">
+        <span class="brand-name">Key Food Waters</span>
+        <span class="brand-tag">Tampa Supermarket</span>
+      </span>
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      <a href="#deals">Weekly Deals</a>
+      <a href="#departments">Departments</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="header-cta" href="tel:+18132523305" aria-label="Call Key Food Waters at (813) 252-3305">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="cta-label">(813) 252-3305</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge reveal">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>4.4 on Google · 109 reviews</span>
+        </div>
+        <h1 class="reveal" data-d="1">Your neighborhood market for <span class="accent">fresh food &amp; super deals</span></h1>
+        <p class="hero-es reveal" data-d="1">¡Súper ofertas cada semana!</p>
+        <p class="hero-sub reveal" data-d="2">Fresh produce, a full-service meat department, Latin &amp; Caribbean staples, dairy, café and more — right here on W Waters Ave in Tampa.</p>
+        <div class="hero-facts reveal" data-d="2">
+          <span class="hero-fact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Open 7AM–10PM every day
+          </span>
+          <span class="hero-fact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            7537 W Waters Ave, Tampa
+          </span>
+        </div>
+        <div class="hero-actions reveal" data-d="3">
+          <a class="btn btn--red" href="tel:+18132523305">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (813) 252-3305
+          </a>
+          <a class="btn btn--outline" href="#deals">See weekly deals</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal" data-d="2">
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop" alt="Wall of fresh colorful produce — lettuce, peppers, limes and cabbage — stocked at the market" width="1000" height="750">
+        </div>
+        <div class="hero-tag" aria-hidden="true">
+          <small>Super deals</small>
+          every week!
+        </div>
+        <div class="hero-hours-chip">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Open every day 7AM–10PM
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE STRIP ============ -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <span>Fresh Produce · Carnicería · Latin Staples · Dairy &amp; Eggs · Café · ¡Súper Ofertas Cada Semana! · Open 7AM–10PM Every Day ·&nbsp;</span>
+      <span>Fresh Produce · Carnicería · Latin Staples · Dairy &amp; Eggs · Café · ¡Súper Ofertas Cada Semana! · Open 7AM–10PM Every Day ·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ============ WEEKLY DEALS ============ -->
+  <section class="deals" id="deals">
+    <div class="container">
+      <div class="deals-head reveal">
+        <span class="kicker">Weekly Deals · Ofertas</span>
+        <h2 class="section-title">New deals hit the shelves every week</h2>
+        <p class="section-sub">Every week we mark down favorites across the whole store — produce, meats, pantry staples and more. Follow us on Instagram to catch this week's flyer.</p>
+      </div>
+      <div class="deals-grid">
+        <div class="deal-card reveal">
+          <span class="punch" aria-hidden="true"></span>
+          <div class="deal-emoji" aria-hidden="true">🥑</div>
+          <h3>Fresh Produce</h3>
+          <p>Weekly markdowns on fruits &amp; veggies — plantains, malanga, tomatoes, avocados and more.</p>
+          <span class="es">Frutas y verduras frescas</span>
+        </div>
+        <div class="deal-card reveal">
+          <span class="punch" aria-hidden="true"></span>
+          <div class="deal-emoji" aria-hidden="true">🥩</div>
+          <h3>Meat Department</h3>
+          <p>Deals on fresh cuts — pork loin, beef eye round, chicken drumsticks and family packs.</p>
+          <span class="es">Carnes frescas cada día</span>
+        </div>
+        <div class="deal-card reveal">
+          <span class="punch" aria-hidden="true"></span>
+          <div class="deal-emoji" aria-hidden="true">🍚</div>
+          <h3>Pantry Staples</h3>
+          <p>Savings on rice, beans, coffee and the Latin &amp; Caribbean brands you grew up with.</p>
+          <span class="es">Todo para tu despensa</span>
+        </div>
+        <div class="deal-card reveal">
+          <span class="punch" aria-hidden="true"></span>
+          <div class="deal-emoji" aria-hidden="true">☕</div>
+          <h3>Café &amp; More</h3>
+          <p>Weekly specials on café favorites, dairy, eggs and everyday essentials.</p>
+          <span class="es">Café y mucho más</span>
+        </div>
+      </div>
+      <div class="deals-cta reveal">
+        <div>
+          <h3>This week's flyer is on Instagram</h3>
+          <p>We post the new deal flyer every week — in English y en Español. Follow @keyfoodwaters so you never miss an oferta.</p>
+        </div>
+        <a class="btn btn--ig" href="https://www.instagram.com/keyfoodwaters/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Follow @keyfoodwaters
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPARTMENTS ============ -->
+  <section class="departments" id="departments">
+    <div class="container">
+      <div class="reveal">
+        <span class="kicker">Departments</span>
+        <h2 class="section-title">Everything for your table, under one roof</h2>
+        <p class="section-sub">From the produce wall to the carnicería counter, we keep the store stocked with fresh food and the brands our neighborhood actually cooks with.</p>
+      </div>
+      <div class="dept-grid">
+        <div class="dept-card reveal">
+          <div class="dept-photo">
+            <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=800&auto=format&fit=crop" alt="Abundant market display of fresh fruits and vegetables" loading="lazy" width="800" height="533">
+          </div>
+          <div class="dept-body">
+            <h3>Fresh Produce</h3>
+            <span class="es-name">Frutas y Verduras</span>
+            <p>Stocked daily with fruits and vegetables — including plantains, malanga, yuca and other Latin &amp; Caribbean favorites.</p>
+          </div>
+        </div>
+        <div class="dept-card reveal">
+          <div class="dept-photo">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=800&auto=format&fit=crop" alt="Fresh cuts of meat arranged on a butcher board with herbs and peppercorns" loading="lazy" width="800" height="533">
+          </div>
+          <div class="dept-body">
+            <h3>Carnicería / Meat</h3>
+            <span class="es-name">Carnes Frescas</span>
+            <p>A full meat case with fresh cuts — pork loin, beef eye round, chicken and more, cut clean and presented right.</p>
+          </div>
+        </div>
+        <div class="dept-card reveal">
+          <div class="dept-photo">
+            <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=800&auto=format&fit=crop" alt="Bright, fully stocked grocery aisle" loading="lazy" width="800" height="533">
+          </div>
+          <div class="dept-body">
+            <h3>Pantry &amp; Latin Staples</h3>
+            <span class="es-name">Tu Despensa</span>
+            <p>Rice, beans, café, sazón and the brands you know — aisles full of Latin &amp; Caribbean staples at good prices.</p>
+          </div>
+        </div>
+        <div class="dept-card reveal">
+          <div class="dept-photo">
+            <img src="https://images.unsplash.com/photo-1506617420156-8e4536971650?q=80&w=800&auto=format&fit=crop" alt="Dairy case stocked with milk, yogurt and refrigerated goods" loading="lazy" width="800" height="533">
+          </div>
+          <div class="dept-body">
+            <h3>Dairy &amp; Eggs</h3>
+            <span class="es-name">Lácteos y Huevos</span>
+            <p>Milk, cheese, yogurt and eggs — the everyday essentials, always in the case.</p>
+          </div>
+        </div>
+        <div class="dept-card reveal">
+          <div class="dept-photo">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=800&auto=format&fit=crop" alt="Rich roasted coffee beans" loading="lazy" width="800" height="533">
+          </div>
+          <div class="dept-body">
+            <h3>Café</h3>
+            <span class="es-name">El Cafecito</span>
+            <p>Café La Llave and more — the strong, rich coffee this neighborhood runs on.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="reveal">
+        <span class="kicker">Reviews</span>
+        <h2 class="section-title">4.4 stars from 109 Google reviews</h2>
+        <p class="section-sub">Here's what neighbors are saying about shopping at Key Food on Waters Ave.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">"This supermarket is awesome! Super low prices, great variety of food… The place is clean and always packed with customers. I go there once every 2 weeks for bread, fruits and veggies. Great variety and prices. I'll keep coming back for sure."</p>
+          <div class="review-name">Allie C.</div>
+          <div class="review-src">Google review</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">"Love this place, specially for meat quality and presentation (clean &amp; beautiful cut) and good offers."</p>
+          <div class="review-name">Rosa P.</div>
+          <div class="review-src">Google review</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars" aria-label="4 out of 5 stars">★★★★<span style="color:#d9d4ca">★</span></div>
+          <p class="review-text">"There was a lot of variety of Caribbean food. We found most of what we needed. The prices were also good and the store personnel were very helpful and friendly. Plenty of onsite parking."</p>
+          <div class="review-name">Yani B.</div>
+          <div class="review-src">Google review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="visit" id="visit">
+    <div class="container">
+      <div class="reveal">
+        <span class="kicker">Visit Us · Visítanos</span>
+        <h2 class="section-title">Come see us on W Waters Ave</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-info reveal" data-d="1">
+          <div class="visit-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <h3>Address</h3>
+              <p>7537 W Waters Ave<br>Tampa, FL 33615</p>
+            </div>
+          </div>
+          <div class="visit-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <h3>Hours</h3>
+              <p>Open every day: 7:00 AM – 10:00 PM</p>
+            </div>
+          </div>
+          <div class="visit-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <h3>Phone</h3>
+              <p><a href="tel:+18132523305">(813) 252-3305</a></p>
+            </div>
+          </div>
+          <div class="visit-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <div>
+              <h3>Instagram</h3>
+              <p><a href="https://www.instagram.com/keyfoodwaters/" target="_blank" rel="noopener">@keyfoodwaters</a> — weekly deal flyers</p>
+            </div>
+          </div>
+          <div class="visit-actions">
+            <a class="btn btn--red" href="tel:+18132523305">Call the store</a>
+            <a class="btn btn--ig" href="https://www.google.com/maps/search/?api=1&amp;query=Key+Food+Supermarket+7537+W+Waters+Ave+Tampa+FL+33615" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+        <div class="visit-map reveal" data-d="2">
+          <iframe title="Map to Key Food Supermarket, 7537 W Waters Ave, Tampa, FL 33615" src="https://www.google.com/maps?q=Key+Food+Supermarket+7537+W+Waters+Ave+Tampa+FL+33615&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">Key Food <span>Waters</span></div>
+    <div>7537 W Waters Ave, Tampa, FL 33615 · <a href="tel:+18132523305">(813) 252-3305</a></div>
+    <div class="footer-credit">Website by <a href="https://wilsoninnovations.net" target="_blank" rel="noopener">Wilson Innovations</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* header scrolled state */
+  var header = document.querySelector(".site-header");
+  function onScroll() {
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 8);
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* scroll reveals */
+  var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px 12% 0px", threshold: 0 });
+    reveals.forEach(function (el) { io.observe(el); });
+
+    /* safety net: momentum scrolling can outrun the observer */
+    var sweepTimer = null;
+    var sweep = function () {
+      sweepTimer = null;
+      var vh = window.innerHeight;
+      reveals = reveals.filter(function (el) {
+        if (el.classList.contains("is-visible")) return false;
+        if (el.getBoundingClientRect().top < vh) {
+          el.classList.add("is-visible");
+          io.unobserve(el);
+          return false;
+        }
+        return true;
+      });
+    };
+    window.addEventListener("scroll", function () {
+      if (!sweepTimer) sweepTimer = setTimeout(sweep, 90);
+    }, { passive: true });
+  }
+})();
+</script>
+
+</body>
+</html>
